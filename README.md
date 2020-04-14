@@ -3,7 +3,7 @@ Real time logger for android<br>
 Built up on Mqtt - primarily designed for low speed networks.
 
 
-#Debug - Error - Verbose - Info - Logger<br>
+# Debug - Error - Verbose - Info - Logger<br>
 Project that demonstrates Realtime logging in android application.These logs can be monitored in 
 a partner app called DevilBoard. This can really be useful while submitting the application for 
 tester/client. As we can see the logs in realtime, the communication gap between the tester and 
@@ -16,7 +16,7 @@ request and response. The complete Devil logger will intercept all the network c
 application with only 2 lines of code. 
 
 
-#Pros<br>
+# Pros<br>
 Light weight<br>
 Light speed<br>
 Low data usage<br>
@@ -29,12 +29,12 @@ Filtering out individual user logs in realtime<br>
 Can be easily implemented for other platforms as well.<br>
 
 
-#Devil Board Monitor
+# Devil Board Monitor
 ![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-57-43-41_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
 
 ![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-58-21-66_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
 
 
-#Devil app demo
+# Devil app demo
 ![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-59-46-847_com.kevin.jevil.png)
 
