@@ -13,4 +13,4 @@ Can give more data on api bottle necks. <br>
 Filtering out individual user logs in realtime<br>
 Can be easily implemented for other platforms as well.<br>
 
-![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/)
+![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-57-43-41_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
