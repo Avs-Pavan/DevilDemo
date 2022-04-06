@@ -13,7 +13,15 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        Devil.breath(new DevilConfig(true, true, serverUri, getApplicationContext(), "Tag", "Will_topic", "Devil is Killed un-consciously caused by network problems mostly"));
+        Devil.breath(
+                new DevilConfig(
+                        true,
+                        true,
+                        serverUri,
+                        getApplicationContext(),
+                        "Tag",
+                        "Will_topic",
+                        "123456"));
     }
 
 }

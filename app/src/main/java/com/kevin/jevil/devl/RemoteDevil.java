@@ -1,8 +1,10 @@
 package com.kevin.jevil.devl;
 
 import android.util.Log;
+
 import com.kevin.jevil.BuildConfig;
 import com.kevin.jevil.devl.models.DevilConfig;
+
 import org.eclipse.paho.android.service.MqttAndroidClient;
 import org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions;
 import org.eclipse.paho.client.mqttv3.IMqttActionListener;
@@ -14,6 +16,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.json.JSONArray;
 import org.json.JSONException;
+
 import io.reactivex.rxjava3.annotations.NonNull;
 
 public final class RemoteDevil {
@@ -31,7 +34,6 @@ public final class RemoteDevil {
         try {
             connectToServer();
         } catch (MqttException e) {
-            // log to firebase
             e.printStackTrace();
         }
     }
@@ -94,6 +96,10 @@ public final class RemoteDevil {
         });
     }
 
+    /**
+     * Send messages to server and other listeners.
+     */
+
     static void scream(String messageString, String topic) {
 
         if (BuildConfig.DEBUG)
@@ -116,6 +122,9 @@ public final class RemoteDevil {
         }
     }
 
+    /**
+     * Processing queued messages
+     **/
 
     private static void processMessageQueue() {
         JSONArray pendingArray = DevilStore.getPendingScreams();

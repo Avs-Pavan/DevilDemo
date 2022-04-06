@@ -12,7 +12,7 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class CustomInterceptor implements Interceptor {
+public class DevilNetworkInterceptor implements Interceptor {
     @NotNull
     @Override
     public Response intercept(@NotNull Chain chain) {
@@ -31,6 +31,5 @@ public class CustomInterceptor implements Interceptor {
             Devil.pr(new DevilRequest(response.code(), tookMs, request.url().toString(), bodySize, (response.receivedResponseAtMillis() - response.sentRequestAtMillis())));
         }
         return response;
-
     }
 }

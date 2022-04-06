@@ -11,13 +11,13 @@ public class RetrofitInstance {
     private static final String BASE_URL = "https://reqres.in/";
 
     /**
-     * Create an instance of Retrofit object
+     * Create an instance of a Retrofit object
      */
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
-            CustomInterceptor customInterceptor = new CustomInterceptor();
+            DevilNetworkInterceptor customInterceptor = new DevilNetworkInterceptor();
             OkHttpClient client = new OkHttpClient.Builder()
                     .addInterceptor(customInterceptor)
                     .addInterceptor(logging)

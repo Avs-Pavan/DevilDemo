@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
 import android.view.View;
 
 import com.kevin.jevil.devl.Devil;
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Devil.e("Devil is  online : Listening for logs");
+//        GestureDetector dic = new GestureDetector(this,this);
     }
 
 
@@ -88,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void erroLog(View view) {
+    public void errorLog(View view) {
         Devil.e("Normal error log");
     }
 

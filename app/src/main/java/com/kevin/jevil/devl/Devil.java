@@ -38,14 +38,14 @@ public final class Devil {
 
     public static void ex(@NonNull String msg, Exception exception) {
         if (sConfig.isLocalEnabled())
-            Log.e(sConfig.getTag(), msg + "\n" + new CodeLocation(exception.getStackTrace()) + "\n" + exception.toString());
+            Log.e(sConfig.getTag(), msg + "\n" + new CodeLocation(exception.getStackTrace()) + "\n" + exception);
         if (sConfig.isRealTimeEnabled())
-            RemoteDevil.scream(gson.toJson(new DevilException(Topics.EXCEPTION, msg, new CodeLocation(exception.getStackTrace()), exception.toString() + "")), Topics.EXCEPTION);
+            RemoteDevil.scream(gson.toJson(new DevilException(Topics.EXCEPTION, msg, new CodeLocation(exception.getStackTrace()), exception + "")), Topics.EXCEPTION);
     }
 
     public static void d(@NonNull String msg, Object... args) {
         if (sConfig.isLocalEnabled()) {
-            Log.d(sConfig.getTag(), getCodeLocation().toString() + formatMessage(msg, args));
+            Log.d(sConfig.getTag(), getCodeLocation() + formatMessage(msg, args));
         }
         if (sConfig.isRealTimeEnabled())
             RemoteDevil.scream(gson.toJson(new DevilLog(Topics.DEBUG, msg, getCodeLocation())), Topics.DEBUG);
@@ -68,7 +68,6 @@ public final class Devil {
                 Log.d(sConfig.getTag(), gson.toJson(devilRequest));
             else
                 Log.e(sConfig.getTag(), gson.toJson(devilRequest));
-
         if (sConfig.isRealTimeEnabled())
             RemoteDevil.scream(gson.toJson(devilRequest), Topics.REQUEST);
     }
