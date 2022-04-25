@@ -14,5 +14,38 @@
         <item name="android:windowFullscreen">true</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
+    <!--base button style starts here-->
+    <style name="_button_style" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/textSize</item>
+        <item name="android:padding">@dimen/padding</item>
+        <item name="maxLines">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">@dimen/minWidth</item>
+        <item name="android:radius">@dimen/radius</item>
+        <item name="android:layout_marginTop">@dimen/layout_margin</item>
+        <item name="android:layout_marginRight">@dimen/layout_margin</item>
+        <item name="android:layout_marginLeft">@dimen/layout_margin</item>
 
+    </style>
+    <style name="PrimaryButton" parent="_button_style">
+        <item name="android:textColor">@color/contentTextColorOnPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/btn_selector</item>
+    </style>
+
+    <!--primary button style ends here-->
+
+    <!--secondary button style starts here-->
+    <style name="SecondaryButton" parent="_button_style">
+        <item name="android:textColor">@color/contentTextColorOnDisabled</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:background">@drawable/seconary_btn_selector</item>
+    </style>
+
+    <style name="FabTheme" parent="Base.Theme.AppCompat.Light">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
 </resources>

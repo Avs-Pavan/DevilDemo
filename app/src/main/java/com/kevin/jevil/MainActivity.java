@@ -1,13 +1,20 @@
 package com.kevin.jevil;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.GestureDetector;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 
-import com.kevin.jevil.devl.Devil;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.kevin.devil.Devil;
+import com.kevin.devil.models.DevilMessage;
 import com.kevin.jevil.retorfit.models.MResponce;
 import com.kevin.jevil.retorfit.RetrofitInstance;
 import com.kevin.jevil.retorfit.UserService;
@@ -16,17 +23,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // Devil.e("Devil is  online : Listening for logs");
-//        GestureDetector dic = new GestureDetector(this,this);
     }
-
 
     public void makeCall() {
         try {
@@ -54,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
         makeCall();
     }
 
-    public void succes(View view) {
+    public void success(View view) {
 
         UserService service = RetrofitInstance.getRetrofitInstance().create(UserService.class);
 
         /** Call the method with parameter in the interface to get the notice data*/
         Call<MResponce> call = service.getUser();
-        call.enqueue(new Callback<MResponce>() {
+        call.enqueue(new Callback<>() {
             @Override
             public void onResponse(Call<MResponce> call, Response<MResponce> response) {
 
@@ -110,8 +113,45 @@ public class MainActivity extends AppCompatActivity {
         Devil.kill();
     }
 
+    private boolean isShowing = false;
+
+    void showSubjectDialog() {
+        isShowing = true;
+        BottomSheetDialog dialog = new BottomSheetDialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        View view = LayoutInflater.from(this).inflate(R.layout.new_message_dialog, null);
+
+        Button primabutton = view.findViewById(R.id.primaryButton);
+        primabutton.setOnClickListener(view1 -> {
+            dialog.dismiss();
+            startActivity(new Intent(MainActivity.this, MessagingActivity.class));
+        });
+        Button sec = view.findViewById(R.id.secondaryButton);
+        sec.setOnClickListener(view1 -> {
+            dialog.dismiss();
+            isShowing = false;
+        });
+        dialog.setContentView(view);
+        dialog.setCancelable(false);
+        dialog.getWindow().setLayout(
+                WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT
+        );
+        dialog.show();
+
+    }
 
     public void debugLog(View view) {
         Devil.d("This is a sample Debug log");
+    }
+
+    public void sendMessage(View view) {
+        startActivity(new Intent(this, MessagingActivity.class));
+    }
+
+    @Override
+    public void updateMessage(@NonNull String topic, @NonNull String payload) {
+        if (!isShowing)
+            showSubjectDialog();
     }
 }

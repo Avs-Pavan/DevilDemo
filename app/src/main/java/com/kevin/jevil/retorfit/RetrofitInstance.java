@@ -1,5 +1,6 @@
 package com.kevin.jevil.retorfit;
 
+import com.kevin.devil.DevilNetworkInterceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;

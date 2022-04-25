@@ -1,27 +1,28 @@
-package com.kevin.jevil;
+package com.kevin.jevil
 
-import android.app.Application;
+import android.app.Application
+import com.kevin.devil.Devil
+import com.kevin.devil.models.DevilConfig
+import com.kevin.devil.models.DevilMessage
+import timber.log.Timber
 
-import com.kevin.jevil.devl.Devil;
-import com.kevin.jevil.devl.models.DevilConfig;
+class App : Application() {
+    val serverUri = "tcp://134.209.144.25:1883"
+    lateinit var userMessages:  ArrayList<DevilMessage>
 
-public class App extends Application {
-
-
-    final String serverUri = "tcp://134.209.144.25:1883";
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
+    override fun onCreate() {
+        super.onCreate()
+        Timber.plant(Timber.DebugTree())
         Devil.breath(
-                new DevilConfig(
-                        true,
-                        true,
-                        serverUri,
-                        getApplicationContext(),
-                        "Tag",
-                        "Will_topic",
-                        "123456"));
+            DevilConfig(
+                true,
+                true,
+                serverUri,
+                applicationContext,
+                "Tag",
+                "Will_topic",
+                "123456"
+            )
+        )
     }
-
 }

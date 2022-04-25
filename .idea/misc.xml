@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/border_rect_grey.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/btn_selector.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/chat_bg_in.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/chat_bg_out.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/ic_baseline_send_24.xml" value="0.1985" />
+        <entry key="app/src/main/res/drawable/seconary_btn_selector.xml" value="0.181" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_messaging.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/in_message.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/new_message_dialog.xml" value="0.29259259259259257" />
+        <entry key="app/src/main/res/layout/out_message.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/row_message.xml" value="0.3098958333333333" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
