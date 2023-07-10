@@ -30,11 +30,11 @@ Can be easily implemented for other platforms as well.<br>
 
 
 # Devil Board Monitor
-![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-57-43-41_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
+![ScreenShot](https://raw.github.com/Avs-Pavan/Devil/master/Screenshot_2020-04-14-20-57-43-41_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
 
-![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-58-21-66_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
+![ScreenShot](https://raw.github.com/Avs-Pavan/Devil/master/Screenshot_2020-04-14-20-58-21-66_84419dcb8b4b5737a3c6fe9248b3efa2.jpg)
 
 
 # Devil app demo
-![ScreenShot](https://raw.github.com/kevinOcconer/Devil/master/Screenshot_2020-04-14-20-59-46-847_com.kevin.jevil.png)
+![ScreenShot](https://raw.github.com/Avs-Pavan/Devil/master/Screenshot_2020-04-14-20-59-46-847_com.kevin.jevil.png)
 
